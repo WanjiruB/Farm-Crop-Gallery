@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins, 'sans-serrif';
+    box-sizing: border-box;
+}
+body{
+    overflow-y: scroll ;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.navSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #BFEA7C;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    
+    
+}
+.navLogo{
+    padding: 5px 0;
+    border : 3px solid #BFEA7C;
+    border-top-right-radius: 5%;
+    background-color: #fff;
+
+}
+span{
+    color: #BFEA7C;
+}
+.navLogo a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+.navSection .navLinks ul li{
+    list-style: none;
+    display: inline-block;
+       
+    margin: 0 20px;
+    align-items: center;
+}
+.navSection .navLinks ul li a{
+    text-decoration: none;
+    color: #FFF;
+    
+}
+.navLinks ul li a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+label{
+    font-size: 1em;
+}
+select{
+    color: #000;
+    
+}
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    padding: 5px 15px;
+}
+.card{
+    width: 18rem;
+    margin-bottom: 15px;
+    
+
+}
+.card-img-top{
+    width: 100%;
+    height: 190px;
+}
+.card-title{
+    font-size: 2em;
+    color: #BFEA7C;
+}
+.card-text{
+    font-size: 1em;
+    color: #000;
+
+
+}
+.popup-image {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 999; 
+}
+
+.popup-image .preview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%; 
+    padding: 20px;
+}
+
+.popup-image .preview img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.popup-image span{
+    position: absolute;
+    top: .3rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    z-index: 50;
+    font-size: 3rem;
+}
+.popup-image span:hover{
+    transform: scale(1.5);
+    color: red;
+}
+.popup-image img{
+    
+    border: 3px solid #FFF;
+    height: 25rem;
+    padding-top: 30px;
+    
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+
+}
+.footer{
+    padding: 30px 15% 10px;
+    border-top: 3px solid #BFEA7C;
+    margin-top:5px;
+    color: #000;
+    
+    
+}
+
+.footer .col{
+    margin-top: 10px;
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col h5{
+    font-size: 18px;
+    font-weight: 450;
+    margin-bottom: 30px;
+    color: #000;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.footer .row{
+   
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-around;
+    
+  
+}
+.footer .col a:hover{
+    color: #BFEA7C;
+    text-decoration: underline;
+
+}
+.footer .col a:hover{
+    transform: translateX(5px);
+}
+.footer .col form{
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    margin-top: 2px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    
+   
+}
+.footer .col form input{
+    position: relative;
+    margin:  30px 0;
+    width: 310px;
+    border: 2px solid #BFEA7C;
+   
+}
+.footer .col form button{
+        width: 100%;
+        height: 40px;
+        border-radius: 40px;
+        background: #BFEA7C;
+        border: 2px ;
+        outline: none;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+        color: #fff;
+    
+}
+
+
+
+
+
+
+
+@media Screen and( max-width :728px){
+   
+   
+    .navSection{
+        width: 100%;
+        font-size: 1em;
+
+    }
+    .images{
+        display: flex;
+        align-items: center;
+        flex-shrink: 1;
+        justify-content: space-around;
+    }
+    .card{
+    width: 15rem;
+    }
+    .popup-image .preview {
+        max-width: 90%; 
+    }
+}
+@media  Screen and (max-width:480px){
+    body{
+        display: block;
+        text-align: center;
+    }
+    .navSection{
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+    }
+    .navLinks{
+        display: flex;
+        flex-direction: column;
+    }
+    .images{
+        display: flex;
+        align-items: center;
+        flex-shrink: 2;
+        flex-direction: column;
+    }
+    .card{
+        width: 13rem;
+    }
+    
+    .footer .col{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+}
+ 
+
